@@ -1,0 +1,17 @@
+.gitignore
+build
+logs
+target
+uploads
+/*.iml
+/.idea
+/.idea_modules
+/.classpath
+/.gradle
+/.projects
+/.settings
+/RUNNING_PID
+conf/application.conf
+.DS_Store
+conf/project/build.properties
+.bsp/*
