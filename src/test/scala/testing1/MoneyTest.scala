@@ -35,4 +35,16 @@ class MoneyTest extends munit.FunSuite {
     assert(!mclp10.equals(mb1))
     assert(!mb1.equals(mb2))
   }
+  test("constructor lista") {
+    val mb = new MoneyBag(List(mclp10, musd14, new Money(30, "Foo")))
+    assertEquals(mb.getMoney("CLP"), Some(mclp10))
+    assertEquals(mb.getMoney("USD"), Some(musd14))
+    assertEquals(mb.getMoney("EUR"), None)
+  }
+
+  test("add heterogeneous") {
+    val expected: MoneyBag = mb1
+    /*val actual: MoneyBag = mclp10.add(musd12)
+    assertEquals(actual, expected)*/
+  }
 }

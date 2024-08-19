@@ -2,6 +2,7 @@ package testing1
 
 class Money(value: Int, currency: String) {
   def getValue(): Int = value
+
   def getCurrency(): String = currency
 
   def add(other: Money): Money = {
