@@ -9,6 +9,7 @@ trait Item {
 }
 class Directory(private val name: String) extends Item {
   val elements: ListBuffer[Item] = ListBuffer()
+  def getElements() = elements
   def getName(): String = name
   def getSize() = {
     elements.foldLeft(0)((acc, e) => acc + e.getSize())
